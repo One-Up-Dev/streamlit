@@ -106,7 +106,7 @@ git push
 
 ### **Problème au niveau du déploiement sur streamlit**
 seaborn.load_dataset() essaie de créer un dossier de cache local
-*Solution* : Charger le dataset directement avec *Pandas*
+*Solution* : Charger le dataset directement avec *Pandas*  
 Avant :
 ```python
 taxis = sns.load_dataset("taxis")
