@@ -5,12 +5,9 @@
 # **`Challenge`** 
 
 ---
-
 ## Crée une application Streamlit qui ressemblera aux images ci-dessous :
 
-
 <img src="images/exemples.png" width="800"/>
-
 
 ---
 
@@ -22,8 +19,7 @@
 
 - Vous mettrez le code dans un notebook et partagerez le lien en lecture.
 
-
-
+---
 ## **Méthodologie**
 
 - création d'un environnement virtuel
@@ -105,3 +101,17 @@ git add .
 git commit -m "mon message"
 git push
 ```
+---
+## **Erreur rencontrer**
+
+### **Problème au niveau du déploiement sur streamlit**
+seaborn.load_dataset() essaie de créer un dossier de cache local
+*Solution* : Charger le dataset directement avec *Pandas*
+Avant :
+```python
+taxis = sns.load_dataset("taxis")
+```
+Après :
+```python
+url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/taxis.csv"
+taxis = pd.read_csv(url)
