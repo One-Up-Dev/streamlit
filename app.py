@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 
-taxis = sns.load_dataset("taxis")
+url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/taxis.csv"
+taxis = pd.read_csv(url)
 
 
 c1 = st.container()
